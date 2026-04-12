@@ -31,7 +31,7 @@ export default function ContactPage() {
         </p>
 
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 32 }}>
-          {[{i:'📞',t:'+216 56 048 884'},{i:'📧',t:'contact@vipdjerba.com'},{i:'📍',t:'Djerba, Tunisie'}].map((c,i)=>(
+          {[{i:'📞',t:'+216 94 512 405'},{i:'📧',t:'sondessjm@gmail.com'},{i:'📍',t:'Djerba, Tunisie'}].map((c,i)=>(
             <IonChip key={i} color="warning" outline>
               <IonLabel style={{ fontSize: 12 }}>{c.i} {c.t}</IonLabel>
             </IonChip>
@@ -88,7 +88,7 @@ export default function ContactPage() {
               </p>
               <IonButton color="success" shape="round"
                 style={{ '--box-shadow': '0 6px 18px rgba(37,211,102,0.25)' }}>
-                💬 WhatsApp — +216 56 048 884
+                💬 WhatsApp — +216 94 512 405
               </IonButton>
             </div>
           </div>
