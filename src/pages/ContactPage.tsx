@@ -31,7 +31,7 @@ export default function ContactPage() {
         </p>
 
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 32 }}>
-          {[{i:'📞',t:'+216 94 512 405'},{i:'📧',t:'sondessjm@gmail.com'},{i:'📍',t:'Djerba, Tunisie'}].map((c,i)=>(
+          {[{i:'📞',t:'+21694512405'},{i:'📧',t:'sondessjm@gmail.com'},{i:'📍',t:'Djerba, Tunisie'}].map((c,i)=>(
             <IonChip key={i} color="warning" outline>
               <IonLabel style={{ fontSize: 12 }}>{c.i} {c.t}</IonLabel>
             </IonChip>

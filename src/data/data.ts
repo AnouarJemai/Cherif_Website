@@ -67,9 +67,10 @@ export const PACKS: Pack[] = [
     features:["Bateau privatisé journée","Jet-Ski illimité","Excursion désert 2j","Brunch + Dîner VIP","Location voiture 3j","Guide privé"] },
 ];
 
+// ✅ Updated tabs — Booking tab replaces Contact in bottom bar
 export const TABS = [
-  { id:"home",       icon:"🏠", label:"Accueil"   },
-  { id:"activities", icon:"🌊", label:"Activités" },
-  { id:"packages",   icon:"✨", label:"Formules"  },
-  { id:"contact",    icon:"📞", label:"Contact"   },
+  { id:"home",       icon:"🏠", label:"Accueil"     },
+  { id:"activities", icon:"🌊", label:"Activités"   },
+  { id:"packages",   icon:"✨", label:"Formules"    },
+  { id:"booking",    icon:"📅", label:"Réserver"    },
 ];
