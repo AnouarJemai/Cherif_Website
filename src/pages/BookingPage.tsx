@@ -23,7 +23,7 @@ export default function BookingPage() {
 
   const buildWhatsAppURL = () => {
     const text = [
-      `Bonjour VIP Djerba ! 👋`,
+      `Bonjour Djerba activities ! 👋`,
       ``,
       `Je souhaite réserver :`,
       `🎯 Activité : ${activity?.title}`,

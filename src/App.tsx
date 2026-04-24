@@ -56,7 +56,7 @@ export default function App() {
                 WebkitTextFillColor: 'transparent',
                 animation: 'shimmer 3s linear infinite',
               }}>
-                VIP DJERBA
+                DJERBA Activities
               </span>
             </div>
           </IonTitle>

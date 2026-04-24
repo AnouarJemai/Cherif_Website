@@ -54,7 +54,7 @@ export const ACTIVITIES: Activity[] = [
 
 export const REVIEWS: Review[] = [
   { name:"Sophie M.", flag:"🇫🇷", text:"Expérience inoubliable ! Le tour en bateau était magnifique.", stars:5 },
-  { name:"Karim B.", flag:"🇩🇿", text:"VIP Djerba a rendu mon séjour vraiment exceptionnel !", stars:5 },
+  { name:"Karim B.", flag:"🇩🇿", text:"Djerba activities a rendu mon séjour vraiment exceptionnel !", stars:5 },
   { name:"Marie D.", flag:"🇧🇪", text:"Organisation au top. L'excursion dans le désert était magique.", stars:5 },
 ];
 
