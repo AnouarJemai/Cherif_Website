@@ -26,30 +26,63 @@ export interface Pack {
 }
 
 export const ACTIVITIES: Activity[] = [
-  { id:1, icon:"🚤", tag:"Populaire", title:"Bateau Privatisé",
-    desc:"Naviguez en liberté sur les eaux turquoise de Djerba à bord de votre bateau privatisé.",
+  { id:1, icon:"🚤", tag:"Populaire", title:"Balade en mers",
+    desc:"Naviguez en liberté sur les eaux turquoise de Djerba.",
     price:"150€", unit:"/ sortie", category:"Mer",
-    img:"https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=600&q=80" },
+    img:"https://cdn-images-1.click-mallorca.com/images/foto-landing/foto_seccion_landing-23840-o.jpg" },
+
+
   { id:2, icon:"🏄", tag:"Adrénaline", title:"Jet-Ski",
     desc:"Glissez à toute vitesse sur la Méditerranée pour des sensations uniques.",
     price:"50€", unit:"/ 30 min", category:"Mer",
     img:"https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=600&q=80" },
+
+
   { id:3, icon:"🐪", tag:"Aventure", title:"Excursion Désert",
     desc:"Traversez les dunes dorées du Sahara et bivouaquez sous les étoiles.",
     price:"80€", unit:"/ pers.", category:"Désert",
+    img:"https://www.saharansky.com/file/2018/10/IMG_5844-copy.jpg" },
+
+
+  { id:4, icon:"🐪", tag:"Aventure", title:"Balade cheval/chameau/caleche",
+    desc:"Traversez les dunes dorées du Sahara et bivouaquez sous les étoiles.",
+    price:"80€", unit:"/ pers.", category:"Désert",
     img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" },
-  { id:4, icon:"🚗", tag:"VIP", title:"Location Voiture",
-    desc:"Explorez l'île à votre rythme dans un véhicule haut de gamme.",
-    price:"40€", unit:"/ jour", category:"Mobilité",
-    img:"https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80" },
-  { id:5, icon:"🍕", tag:"Saveurs", title:"Livraison Cuisine",
-    desc:"Pizzas, burgers et spécialités tunisiennes livrés directement chez vous.",
-    price:"15€", unit:"min.", category:"Gastronomie",
-    img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" },
-  { id:6, icon:"🌅", tag:"Luxe", title:"Brunch VIP",
-    desc:"Produits frais, spécialités locales et table dressée face à la mer.",
-    price:"25€", unit:"/ pers.", category:"Gastronomie",
-    img:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" },
+
+
+  { id:5, icon:"🐪", tag:"Aventure", title:"tour de l ile",
+    desc:"Découvrez Djerba avec un guide.",
+    price:"80€", unit:"/ pers.", category:"Désert",
+    img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" },
+
+
+
+  { id:7, icon:"🏍️", tag:"Populaire", title:"Excursion Quads",
+    desc:"Découvrez Djerba avec les quads.",
+    price:"30€", unit:"/ pers.", category:"Mobilité",
+    img:"https://tse2.mm.bing.net/th/id/OIP.FUb9yK89WzyctFZRwkS4YwHaE8?w=474&h=379&c=7&p=0"},
+
+
+  { id:9, icon:"🌊", tag:"Aventure", title:"Sports Nautiques",
+    desc:"Jet ski, banana boat et parachute ascensionnel à Djerba.",
+    price:"45€",
+    unit:"/ pers.",
+    category:"Loisirs",
+    img:"https://media.ceetiz.com/activity/DEPDJE007/Jet-Ski_Djerba_Ceetiz-4.JPG"},
+
+  { id:10, icon:"🌊", tag:"Aventure", title:"activite de poterie",
+    desc:"Poterie.",
+    price:"45€",
+    unit:"/ pers.",
+    category:"Loisirs",
+    img:"https://media.ceetiz.com/activity/DEPDJE007/Jet-Ski_Djerba_Ceetiz-4.JPG"},
+
+  { id:11, icon:"🌊", tag:"Aventure", title:"preparer des repas traditionnels",
+    desc:"Preparer Couscous......",
+    price:"45€",
+    unit:"/ pers.",
+    category:"Loisirs",
+    img:"https://media.ceetiz.com/activity/DEPDJE007/Jet-Ski_Djerba_Ceetiz-4.JPG"},
 ];
 
 export const REVIEWS: Review[] = [

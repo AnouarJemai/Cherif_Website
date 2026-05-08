@@ -55,14 +55,21 @@ export default function HomePage({ setTab }: Props) {
           <h1 style={{ fontFamily: "'Playfair Display', serif",
             fontSize: 'clamp(38px, 7vw, 72px)', lineHeight: 1.07,
             margin: '0 0 20px', fontWeight: 900 }}>
-            <span style={{ color: '#fff' }}>Vivez l'</span>
+            <span style={{ color: '#fff' }}>Les meilleures</span>
             <span style={{
               background: 'linear-gradient(90deg,#C9A84C,#F5E07A,#C9A84C)',
               backgroundSize: '200%', WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               animation: 'shimmer 3s linear infinite', fontStyle: 'italic',
-            }}>Expérience</span>
-            <br /><span style={{ color: '#fff' }}>VIP à Djerba</span>
+            }}> activités</span>
+            <br />
+            <span style={{ color: '#fff' }}>à Djerba — </span>
+            <span style={{
+              background: 'linear-gradient(90deg,#C9A84C,#F5E07A,#C9A84C)',
+              backgroundSize: '200%', WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              animation: 'shimmer 3s linear infinite', fontStyle: 'italic',
+            }}>au même endroit</span>
           </h1>
 
           <p style={{ color: '#6a8a6a', fontSize: 'clamp(13px,1.8vw,16px)',
