@@ -1,9 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
-import type { Activity } from '../data/data'; // ✅ type-only import
+import type { Activity } from '../data/data';
 import { IonButton } from '@ionic/react';
 import React from 'react';
 
-interface Props { activity: Activity; index: number; }
+interface Props {
+  activity: Activity;
+  index: number;
+  onBook?: (activity: Activity) => void; // ✅ callback to trigger booking
+}
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,7 +23,7 @@ function useInView(threshold = 0.1) {
   return [ref, inView] as const;
 }
 
-export default function ActivityCard({ activity: a, index: i }: Props) {
+export default function ActivityCard({ activity: a, index: i, onBook }: Props) {
   const [ref, inView] = useInView();
   const [hov, setHov] = useState(false);
 
@@ -43,10 +47,9 @@ export default function ActivityCard({ activity: a, index: i }: Props) {
         flexDirection: 'column',
       }}
     >
+      {/* Image */}
       <div style={{ position: 'relative', height: 170, overflow: 'hidden' }}>
-        <img
-          src={a.img}
-          alt={a.title}
+        <img src={a.img} alt={a.title}
           style={{
             width: '100%', height: '100%', objectFit: 'cover',
             transform: hov ? 'scale(1.07)' : 'scale(1)',
@@ -70,6 +73,7 @@ export default function ActivityCard({ activity: a, index: i }: Props) {
         </span>
       </div>
 
+      {/* Body */}
       <div style={{ padding: '16px 18px 18px', flex: 1, display: 'flex', flexDirection: 'column' }}>
         <h3 style={{
           margin: '0 0 6px', color: '#fff', fontSize: 15,
@@ -78,8 +82,8 @@ export default function ActivityCard({ activity: a, index: i }: Props) {
           {a.title}
         </h3>
         <p style={{
-          margin: '0 0 14px', color: '#6a8a6a', fontSize: 12.5,
-          lineHeight: 1.6, flex: 1,
+          margin: '0 0 14px', color: '#6a8a6a',
+          fontSize: 12.5, lineHeight: 1.6, flex: 1,
         }}>
           {a.desc}
         </p>
@@ -95,13 +99,19 @@ export default function ActivityCard({ activity: a, index: i }: Props) {
               {a.unit}
             </span>
           </div>
+
+          {/* ✅ Clicking this button triggers the booking flow directly */}
           <IonButton
             size="small"
             fill={hov ? 'solid' : 'outline'}
             color="warning"
             style={{ '--border-radius': '20px', fontSize: 11 } as React.CSSProperties}
+            onClick={(e) => {
+              e.stopPropagation(); // prevent card click bubbling
+              if (onBook) onBook(a);
+            }}
           >
-            Réserver
+            Réserver →
           </IonButton>
         </div>
       </div>

@@ -32,12 +32,6 @@ export const ACTIVITIES: Activity[] = [
     img:"https://cdn-images-1.click-mallorca.com/images/foto-landing/foto_seccion_landing-23840-o.jpg" },
 
 
-  { id:2, icon:"🏄", tag:"Adrénaline", title:"Jet-Ski",
-    desc:"Glissez à toute vitesse sur la Méditerranée pour des sensations uniques.",
-    price:"50€", unit:"/ 30 min", category:"Mer",
-    img:"https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=600&q=80" },
-
-
   { id:3, icon:"🐪", tag:"Aventure", title:"Excursion Désert",
     desc:"Traversez les dunes dorées du Sahara et bivouaquez sous les étoiles.",
     price:"80€", unit:"/ pers.", category:"Désert",

@@ -15,20 +15,32 @@ import ActivitiesPage from './pages/ActivitiesPage';
 import PackagesPage from './pages/PackagesPage';
 import BookingPage from './pages/BookingPage';
 import BottomTabBar from './components/BottomTabBar';
-
+import type { Activity } from './data/data';
 
 setupIonicReact({ mode: 'md' });
 
 type TabId = 'home' | 'activities' | 'packages' | 'booking';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<TabId>('home');
+  const [activeTab, setActiveTab]               = useState<TabId>('home');
+  const [preselected, setPreselected]           = useState<Activity | null>(null);
+
+  // Called when user clicks "Réserver" on an activity card
+  const handleBookActivity = (activity: Activity) => {
+    setPreselected(activity);
+    setActiveTab('booking');
+  };
 
   const pages: Record<TabId, React.ReactElement> = {
     home:       <HomePage setTab={(id) => setActiveTab(id as TabId)} />,
-    activities: <ActivitiesPage />,
+    activities: <ActivitiesPage onBook={handleBookActivity} />,
     packages:   <PackagesPage />,
-    booking:    <BookingPage />,
+    booking:    (
+      <BookingPage
+        preselected={preselected}
+        onClearPreselected={() => setPreselected(null)}
+      />
+    ),
   };
 
   return (
@@ -56,14 +68,14 @@ export default function App() {
                 WebkitTextFillColor: 'transparent',
                 animation: 'shimmer 3s linear infinite',
               }}>
-                DJERBA Activities
+                DJERBA ACTIVITIES
               </span>
             </div>
           </IonTitle>
           <IonButtons slot="end" style={{ paddingRight: 12 }}>
             <IonButton color="warning" fill="solid" shape="round" size="small"
               style={{ '--border-radius': '20px' } as React.CSSProperties}
-              onClick={() => setActiveTab('booking')}>
+              onClick={() => { setPreselected(null); setActiveTab('booking'); }}>
               Réserver
             </IonButton>
           </IonButtons>
@@ -76,7 +88,11 @@ export default function App() {
 
       <BottomTabBar
         activeTab={activeTab}
-        setTab={(id) => setActiveTab(id as TabId)}
+        setTab={(id) => {
+          // Clear preselection when navigating away from booking manually
+          if (id !== 'booking') setPreselected(null);
+          setActiveTab(id as TabId);
+        }}
       />
 
     </IonApp>
