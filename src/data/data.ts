@@ -49,13 +49,10 @@ export const ACTIVITIES: Activity[] = [
     price:"80€", unit:"/ pers.", category:"Désert",
     img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" },
 
-
-
   { id:7, icon:"🏍️", tag:"Populaire", title:"Excursion Quads",
     desc:"Découvrez Djerba avec les quads.",
     price:"30€", unit:"/ pers.", category:"Mobilité",
     img:"https://tse2.mm.bing.net/th/id/OIP.FUb9yK89WzyctFZRwkS4YwHaE8?w=474&h=379&c=7&p=0"},
-
 
   { id:9, icon:"🌊", tag:"Aventure", title:"Sports Nautiques",
     desc:"Jet ski, banana boat et parachute ascensionnel à Djerba.",
@@ -69,14 +66,14 @@ export const ACTIVITIES: Activity[] = [
     price:"45€",
     unit:"/ pers.",
     category:"Loisirs",
-    img:"https://media.ceetiz.com/activity/DEPDJE007/Jet-Ski_Djerba_Ceetiz-4.JPG"},
-
-  { id:11, icon:"🌊", tag:"Aventure", title:"preparer des repas traditionnels",
-    desc:"Preparer Couscous......",
-    price:"45€",
+    img:"https://images.openai.com/static-rsc-4/Nx6sGOTqrFQuFMEGqRqxCbc6ZAM9xDYS9gDRKMpy2D6jOqKBftDv9yCiBdjOKhsjoM11bbWpthW47XAclh_K-oh3prfJljkxYq5r2UAqpedBjz_YHVQDxBGKAR0yNyeeNkUhfQ5kr85wq2jumY_DrAaM2vKsP2uo6iENq647WouxWyfWZVWSAEznqnWpvdvO?purpose=fullsize"},
+  
+  { id:13, icon:"🥘", tag:"Culture", title:"Préparation de Repas Traditionnels",
+    desc:"Participez à un atelier culinaire traditionnel et apprenez à préparer un authentique couscous tunisien à Djerba.",
+    price:"40€",
     unit:"/ pers.",
-    category:"Loisirs",
-    img:"https://media.ceetiz.com/activity/DEPDJE007/Jet-Ski_Djerba_Ceetiz-4.JPG"},
+    category:"Tourisme Culturel",
+    img:"https://tse2.mm.bing.net/th/id/OIP.8zpFZ3Rz7xdm4J_9HpNCJQHaF7?r=0&w=474&h=379&c=7&p=0"},
 ];
 
 export const REVIEWS: Review[] = [
